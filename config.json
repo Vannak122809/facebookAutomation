@@ -1,0 +1,62 @@
+{
+    "page_load_timeout": 30,
+    "wait_timeout": 10,
+    "max_login_retries": 2,
+    "custom_user_agent": "",
+    "locale_lang": "Khmer (km)",
+    "auto_backup_enabled": false,
+    "backup_dir": "backups",
+    "last_backup_date": "2026-05-27 13:11:38",
+    "xpath_email": "//input[@name='email']",
+    "xpath_pass": "//input[@name='pass']",
+    "xpath_login_btn": "//button[@name='login']",
+    "xpath_invite_btn": "//button[contains(.,'Invite')] | //span[text()='Invite'] | //div[text()='Invite']",
+    "theme_mode": "light",
+    "tasks": [
+        "feeds",
+        "watch_video",
+        "invite",
+        "add_friend",
+        "confirm_friend"
+    ],
+    "invite_links": [
+        "https://www.facebook.com/TianXinSchool",
+        "https://www.facebook.com/share/1EQtuc6hyo/?mibextid=wwXIfr",
+        "https://www.facebook.com/share/1Kqq5T7vWg/?mibextid=wwXIfr"
+    ],
+    "group_keyword": "Shopping",
+    "post_caption": "",
+    "photo_path": "",
+    "video_path": "",
+    "random_reactions": false,
+    "feed_mins": 1,
+    "video_feed_mins": 1,
+    "story_count": 1,
+    "invite_count": 3,
+    "add_friend_count": 3,
+    "confirm_friend_count": 3,
+    "join_group_count": 3,
+    "share_group_count": 11,
+    "scrape_limit": 100,
+    "max_invites_per_page": 10,
+    "delay_min": 2,
+    "delay_max": 5,
+    "run_mode": "Run by Account",
+    "api_key": "AIzaSyBu0aZfd464GEOnAl4aZDpEPrhogWohga8",
+    "account_media": {
+        "61564565084669": {
+            "photo": "",
+            "video": "",
+            "caption": "",
+            "pages": [],
+            "enabled": true
+        },
+        "61560833254370": {
+            "photo": "",
+            "video": "",
+            "caption": "",
+            "pages": [],
+            "enabled": true
+        }
+    }
+}

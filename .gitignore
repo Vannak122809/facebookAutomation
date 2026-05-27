@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+cookies/
+profiles/
+backups/
+account_history.json
+config.json
