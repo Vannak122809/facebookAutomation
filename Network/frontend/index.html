@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetManager — Network & AnyDesk Dashboard</title>
+  <meta name="description" content="Corporate network monitoring and AnyDesk remote access diagnostic dashboard" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/css/xterm.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/lib/xterm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.10.0/lib/addon-fit.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css?v=2.3" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon"><i class="ph ph-network"></i></div>
+      <span class="brand-text">NetManager</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#dashboard"  class="nav-item active" data-page="dashboard">
+        <i class="ph ph-squares-four"></i><span>Dashboard</span>
+      </a>
+      <a href="#devices"    class="nav-item" data-page="devices">
+        <i class="ph ph-desktop-tower"></i><span>Devices</span>
+      </a>
+      <a href="#scanner"    class="nav-item" data-page="scanner">
+        <i class="ph ph-radar"></i><span>Scanner</span>
+      </a>
+      <a href="#anydesk"    class="nav-item" data-page="anydesk">
+        <i class="ph ph-monitor-arrow-up"></i><span>AnyDesk</span>
+      </a>
+      <a href="#logs"       class="nav-item" data-page="logs">
+        <i class="ph ph-bell"></i><span>Alerts <span class="badge" id="alert-badge">0</span></span>
+      </a>
+      <a href="#remote"     class="nav-item" data-page="remote">
+        <i class="ph ph-monitor-play"></i><span>Remote Sessions</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="status-dot" id="ws-indicator" title="Real-time connection"></div>
+      <span id="ws-label">Connecting…</span>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main" id="main">
+    <header class="topbar">
+      <button class="menu-toggle" id="menu-toggle"><i class="ph ph-list"></i></button>
+      <div class="topbar-title" id="page-title">Dashboard</div>
+      <div class="topbar-actions">
+        <span class="time-display" id="clock"></span>
+      </div>
+    </header>
+
+    <!-- Pages -->
+    <div class="page active" id="page-dashboard"></div>
+    <div class="page" id="page-devices"></div>
+    <div class="page" id="page-scanner"></div>
+    <div class="page" id="page-anydesk"></div>
+    <div class="page" id="page-logs"></div>
+    <div class="page" id="page-remote"></div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h3 id="modal-title">Modal</h3>
+        <button class="modal-close" id="modal-close"><i class="ph ph-x"></i></button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script type="module" src="/static/js/app.js?v=2.3"></script>
+</body>
+</html>
